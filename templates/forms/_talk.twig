@@ -25,10 +25,10 @@
     </div>
 
 
-<div class="form-group">
-        <label for="form-talk-slides" class="col-sm-2 control-label">Video pitch</label>
+    <div class="form-group">
+        <label for="form-talk-pitch" class="col-sm-2 control-label">Video pitch</label>
         <div class="col-sm-10">
-            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Want to give yourself the edge? Pitch your idea via video." value="{{ slides }}">
+            <input id="form-talk-pitch" type="text" name="pitch" class="form-control" placeholder="Want to give yourself the edge? Pitch your idea via video." value="{{ pitch }}">
         </div>
     </div>
 
@@ -63,18 +63,49 @@
             </select>
         </div>
     </div>
+
     <div class="form-group">
-        <label for="form-sponsor" class="col-sm-2 control-label">Company Sponsorship</label>
+        <label for="form-sponsor" class="col-sm-2 control-label">Have you given this talk before</label>
         <div class="col-sm-10">
             <div class="checkbox">
                 <label for="form-sponsor">
-                    <input id="form-sponsor" name="sponsor" type="checkbox" value="1" {% if sponsor == '1' %}checked{% endif %}> Is your company sponsoring, or would they like to?
+                    <input id="form-sponsor" name="sponsor" type="checkbox" value="1" {% if sponsor == '1' %}checked{% endif %}> Yes/No?
                 </label>
             </div>
         </div>
     </div>
     <div class="form-group">
-        <label for="form-desired" class="col-sm-2 control-label">Most Desired</label>
+        <label for="form-talk-where" class="col-sm-2 control-label">If yes, where:</label>
+        <div class="col-sm-10">
+            <input id="form-talk-where" type="text" name="where" class="form-control" placeholder="" value="{{ where }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-talk-videos" class="col-sm-2 control-label">Slides</label>
+        <div class="col-sm-10">
+            <input id="form-talk-videos" type="text" name="videos" class="form-control" placeholder="Videos" value="{{ videos }}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-talk-slides" class="col-sm-2 control-label">Slides</label>
+        <div class="col-sm-10">
+            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Your Slides" value="{{ slides }}">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="form-talk-events" class="col-sm-2 control-label">Other events you have spoken at</label>
+        <div class="col-sm-10">
+            <input id="form-talk-events" type="text" name="events" class="form-control" placeholder="" value="{{ events }}">
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label for="form-desired" class="col-sm-2 control-label">Best submission: Of your submissions, is this your best?</label>
         <div class="col-sm-10">
             <div class="checkbox">
                 <label for="form-desired">
