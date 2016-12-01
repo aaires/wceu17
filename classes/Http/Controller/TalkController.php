@@ -313,7 +313,7 @@ class TalkController extends BaseController
                 'slides' => $sanitized_data['slides'],
                 'pitch' => $sanitized_data['pitch'],
                 'oplace' => $sanitized_data['oplace'],
-                'ovents' => $sanitized_data['oevents'],
+                'oevents' => $sanitized_data['oevents'],
                 'videos' => $sanitized_data['videos'],
                 'other' => $sanitized_data['other'],
                 'sponsor' => $sanitized_data['sponsor'],
