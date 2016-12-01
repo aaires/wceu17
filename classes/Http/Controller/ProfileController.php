@@ -81,6 +81,7 @@ class ProfileController extends BaseController
 
             return $this->redirectTo('dashboard');
         }
+        print_r($req);
 
         echo 'I CAN READ '.$req->get('email') . $req->get('wporg'); die;
 
