@@ -18,6 +18,10 @@ a:hover {
   background: #ebeef1;
 }
 
+.dashboard .section{
+    margin-top: 15px;
+}
+
 .header {
   background: #2d282d;
   color: #FFF;
