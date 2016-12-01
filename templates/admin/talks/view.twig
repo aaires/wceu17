@@ -25,7 +25,10 @@
                 <div role="tabpanel" class="tab-pane active" id="abstract">
                     <p>{{ talk.description|striptags|markdown }}</p>
                     {% if talk.other is defined %}
-                        <p><strong>Other Info:</strong> {{ talk.other|striptags|markdown }}</p>
+                        <p><strong>Key takeaway:</strong> {{ talk.other|striptags|markdown }}</p>
+                    {% endif %}
+                    {% if talk.pitch is defined %}
+                        <p><strong>Video Pitch:</strong> {{ talk.pitch }}</p>
                     {% endif %}
                 </div>
                 <div role="tabpanel" class="tab-pane" id="additional-info">
