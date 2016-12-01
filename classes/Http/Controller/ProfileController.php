@@ -149,10 +149,12 @@ class ProfileController extends BaseController
                 $user->photo_path = $sanitized_data['speaker_photo'];
             }
 
+            print_r($sanitized_data);
+
             /** @var $response number of affected rows */
             $response = $mapper->save($user);
 
-            print_r($user); 
+            print_r($user); die;
 
             if ($response >= 0) {
                 $this->service('session')->set('flash', [
