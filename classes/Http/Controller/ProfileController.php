@@ -41,7 +41,7 @@ class ProfileController extends BaseController
 
         error_log('============================OLA');
 
-        print_r($speaker_data); die;
+        print_r($speaker_data);
 
         $form_data = [
             'email' => $user->getLogin(),
