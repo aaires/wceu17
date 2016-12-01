@@ -45,6 +45,7 @@ class ProfileController extends BaseController
             'last_name' => $speaker_data['last_name'],
             'company' => $speaker_data['company'],
             'twitter' => $speaker_data['twitter'],
+            'wporg'   => $speaker_data['wporg'],
             'speaker_info' => $speaker_data['info'],
             'speaker_bio' => $speaker_data['bio'],
             'speaker_photo' => $speaker_data['photo_path'],
@@ -88,6 +89,7 @@ class ProfileController extends BaseController
             'last_name' => $req->get('last_name'),
             'company' => $req->get('company'),
             'twitter' => $req->get('twitter'),
+            'wporg' => $req->get('wporg'),
             'airport' => $req->get('airport'),
             'transportation' => $req->get('transportation'),
             'hotel' => $req->get('hotel'),
@@ -108,6 +110,7 @@ class ProfileController extends BaseController
 
             // Remove leading @ for twitter
             $sanitized_data['twitter'] = preg_replace('/^@/', '', $sanitized_data['twitter']);
+            $sanitized_data['wporg'] = preg_replace('/^@/', '', $sanitized_data['wporg']);
 
             if (isset($form_data['speaker_photo'])) {
                 /** @var \Symfony\Component\HttpFoundation\File\UploadedFile $file */
@@ -135,6 +138,7 @@ class ProfileController extends BaseController
             $user->last_name = $sanitized_data['last_name'];
             $user->company = $sanitized_data['company'];
             $user->twitter = $sanitized_data['twitter'];
+            $user->wporg = $sanitized_data['wporg'];
             $user->airport = $sanitized_data['airport'];
             $user->transportation = (int) $sanitized_data['transportation'];
             $user->hotel = (int) $sanitized_data['hotel'];
@@ -263,6 +267,7 @@ class ProfileController extends BaseController
         $user->last_name = $sanitized_data['last_name'];
         $user->company = $sanitized_data['company'];
         $user->twitter = $sanitized_data['twitter'];
+        $user->wporg = $sanitized_data['wporg'];
         $user->airport = $sanitized_data['airport'];
         $user->transportation = $sanitized_data['transportation'];
         $user->hotel = $sanitized_data['hotel'];

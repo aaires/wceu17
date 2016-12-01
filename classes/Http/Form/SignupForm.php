@@ -15,6 +15,7 @@ class SignupForm extends Form
         'last_name',
         'company',
         'twitter',
+        'wporg',
         'speaker_info',
         'speaker_bio',
         'transportation',
@@ -45,6 +46,7 @@ class SignupForm extends Form
         $valid_last_name = $this->validateLastName();
         $valid_company = $this->validateCompany();
         $valid_twitter = $this->validateTwitter();
+        $valid_wporg = $this->validateWporg();
         $valid_speaker_photo = $this->validateSpeakerPhoto();
         $valid_speaker_info = true;
         $valid_speaker_bio = true;
@@ -64,6 +66,7 @@ class SignupForm extends Form
             $valid_last_name &&
             $valid_company &&
             $valid_twitter &&
+            $valid_wporg &&
             $valid_speaker_info &&
             $valid_speaker_bio &&
             $valid_speaker_photo &&
@@ -241,6 +244,12 @@ class SignupForm extends Form
     public function validateTwitter()
     {
         // $twitter = $this->_cleanData['twitter'];
+        return true;
+    }
+
+    public function validateWporg()
+    {
+        // $twitter = $this->_cleanData['wporg'];
         return true;
     }
 
