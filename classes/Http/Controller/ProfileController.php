@@ -39,6 +39,9 @@ class ProfileController extends BaseController
         $mapper = $spot->mapper('\OpenCFP\Domain\Entity\User');
         $speaker_data = $mapper->get($user->getId())->toArray();
 
+        error_log('============================OLA');
+
+
         $form_data = [
             'email' => $user->getLogin(),
             'first_name' => $speaker_data['first_name'],
@@ -273,9 +276,6 @@ class ProfileController extends BaseController
         $user->hotel = $sanitized_data['hotel'];
         $user->info = $sanitized_data['speaker_info'];
         $user->bio = $sanitized_data['speaker_bio'];
-
-        error_log('DEBUG');
-        error_log(print_r($user, true));
 
         return $mapper->save($user);
     }
