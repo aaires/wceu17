@@ -152,6 +152,8 @@ class ProfileController extends BaseController
             /** @var $response number of affected rows */
             $response = $mapper->save($user);
 
+            print_r($user); 
+
             if ($response >= 0) {
                 $this->service('session')->set('flash', [
                     'type' => 'success',
@@ -273,8 +275,6 @@ class ProfileController extends BaseController
         $user->hotel = $sanitized_data['hotel'];
         $user->info = $sanitized_data['speaker_info'];
         $user->bio = $sanitized_data['speaker_bio'];
-
-        print_r($user); die;
 
         return $mapper->save($user);
     }
