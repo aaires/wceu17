@@ -81,9 +81,9 @@ class ProfileController extends BaseController
 
             return $this->redirectTo('dashboard');
         }
-        print_r($req);
+        //print_r($req);
 
-        echo 'I CAN READ '.$req->get('email') . $req->get('wporg'); die;
+        //echo 'I CAN READ '.$req->get('email') . $req->get('wporg'); die;
 
         $form_data = [
             'email' => $req->get('email'),
@@ -152,7 +152,7 @@ class ProfileController extends BaseController
                 $user->photo_path = $sanitized_data['speaker_photo'];
             }
 
-            print_r($sanitized_data); die;
+         //   print_r($sanitized_data); die;
 
             /** @var $response number of affected rows */
             $response = $mapper->save($user);
