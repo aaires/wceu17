@@ -29,6 +29,8 @@ class User extends Entity
             'company' => ['type' => 'string', 'length' => 255],
             'twitter' => ['type' => 'string', 'length' => 255],
             'wporg'   => ['type' => 'string', 'length' => 255],
+            'gravatar' => ['type' => 'string', 'length' => 255],
+            'slack'   => ['type' => 'string', 'length' => 255],
             'airport' => ['type' => 'string', 'length' => 5],
             'hotel' => ['type' => 'smallint', 'value' => 0],
             'transportation' => ['type' => 'smallint', 'value' => 0],

@@ -16,6 +16,8 @@ class SignupForm extends Form
         'company',
         'twitter',
         'wporg',
+        'slack',
+        'gravatar',
         'speaker_info',
         'speaker_bio',
         'transportation',
@@ -47,6 +49,8 @@ class SignupForm extends Form
         $valid_company = $this->validateCompany();
         $valid_twitter = $this->validateTwitter();
         $valid_wporg = $this->validateWporg();
+        $valid_slack = $this->validateSlack();
+        $valid_gravatar = $this->validateGravatar();
         $valid_speaker_photo = $this->validateSpeakerPhoto();
         $valid_speaker_info = true;
         $valid_speaker_bio = true;
@@ -67,6 +71,8 @@ class SignupForm extends Form
             $valid_company &&
             $valid_twitter &&
             $valid_wporg &&
+            $valid_slack &&
+            $valid_gravatar &&
             $valid_speaker_info &&
             $valid_speaker_bio &&
             $valid_speaker_photo &&
@@ -251,6 +257,25 @@ class SignupForm extends Form
     {
         // $twitter = $this->_cleanData['wporg'];
         return true;
+    }
+
+    public function validateSlack()
+    {
+        // $twitter = $this->_cleanData['slack'];
+        return true;
+    }
+
+    public function validateGravatar()
+    {
+            $response = filter_var($this->_taintedData['gravatar'], FILTER_VALIDATE_EMAIL);
+
+            if (!$response) {
+                $this->_addErrorMessage("Invalid email address format for gravatar");
+
+                return false;
+            }
+
+            return true;
     }
 
     /**

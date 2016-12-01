@@ -46,6 +46,8 @@ class ProfileController extends BaseController
             'company' => $speaker_data['company'],
             'twitter' => $speaker_data['twitter'],
             'wporg'   => $speaker_data['wporg'],
+            'slack' => $speaker_data['slack'],
+            'gravatar' => $speaker_data['gravatar'],
             'speaker_info' => $speaker_data['info'],
             'speaker_bio' => $speaker_data['bio'],
             'speaker_photo' => $speaker_data['photo_path'],
@@ -93,6 +95,8 @@ class ProfileController extends BaseController
             'company' => $req->get('company'),
             'twitter' => $req->get('twitter'),
             'wporg' => $req->get('wporg'),
+            'slack' => $req->get('slack'),
+            'gravatar' => $req->get('gravatar'),
             'airport' => $req->get('airport'),
             'transportation' => $req->get('transportation'),
             'hotel' => $req->get('hotel'),
@@ -114,6 +118,7 @@ class ProfileController extends BaseController
             // Remove leading @ for twitter
             $sanitized_data['twitter'] = preg_replace('/^@/', '', $sanitized_data['twitter']);
             $sanitized_data['wporg'] = preg_replace('/^@/', '', $sanitized_data['wporg']);
+            $sanitized_data['slack'] = preg_replace('/^@/', '', $sanitized_data['slack']);
 
             if (isset($form_data['speaker_photo'])) {
                 /** @var \Symfony\Component\HttpFoundation\File\UploadedFile $file */
@@ -142,6 +147,8 @@ class ProfileController extends BaseController
             $user->company = $sanitized_data['company'];
             $user->twitter = $sanitized_data['twitter'];
             $user->wporg = $sanitized_data['wporg'];
+            $user->slack = $sanitized_data['slack'];
+            $user->gravatar = $sanitized_data['gravatar'];
             $user->airport = $sanitized_data['airport'];
             $user->transportation = (int) $sanitized_data['transportation'];
             $user->hotel = (int) $sanitized_data['hotel'];
@@ -274,6 +281,8 @@ class ProfileController extends BaseController
         $user->company = $sanitized_data['company'];
         $user->twitter = $sanitized_data['twitter'];
         $user->wporg = $sanitized_data['wporg'];
+        $user->slack = $sanitized_data['slack'];
+        $user->gravatar = $sanitized_data['gravatar'];
         $user->airport = $sanitized_data['airport'];
         $user->transportation = $sanitized_data['transportation'];
         $user->hotel = $sanitized_data['hotel'];
