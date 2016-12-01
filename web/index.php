@@ -1,13 +1,10 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php';
+define('WEB_PATH', __DIR__ );
 
-use OpenCFP\Application;
-use OpenCFP\Environment;
+$path = WEB_PATH . $_SERVER['REQUEST_URI'];
+if (is_file($path)) {
+    return false;
+}
 
-$basePath = realpath(dirname(__DIR__));
-$environment = Environment::fromEnvironmentVariable();
-
-$app = new Application($basePath, $environment);
-
-$app->run();
+require_once 'index_dev.php';

@@ -26,7 +26,8 @@ class Talk extends Entity
             'selected' => ['type' => 'smallint', 'value' => 0],
             'created_at' => ['type' => 'datetime', 'value' => new \DateTime()],
             'updated_at' => ['type' => 'datetime', 'value' => new \DateTime()],
-        ];
+			'videos' => ['type' => 'string', 'lenght' => 50 ],
+		];
     }
 
     public static function relations(\Spot\MapperInterface $mapper, \Spot\EntityInterface $entity)

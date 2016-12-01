@@ -15,12 +15,23 @@
             <p class="help-block">Speaker abstract can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
-    <div class="form-group">
-        <label for="form-talk-slides" class="col-sm-2 control-label">Slides</label>
+
+	<div class="form-group">
+        <label for="form-talk-other" class="col-sm-2 control-label">Key takeaway</label>
         <div class="col-sm-10">
-            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Slides URL (if exists)" value="{{ slides }}">
+            <textarea id="form-talk-other" name="other" class="form-control" placeholder="What is the key message that the audience will take away with them?" rows="5">{{ other }}</textarea>
+            <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
+
+
+<div class="form-group">
+        <label for="form-talk-slides" class="col-sm-2 control-label">Video pitch</label>
+        <div class="col-sm-10">
+            <input id="form-talk-slides" type="text" name="slides" class="form-control" placeholder="Want to give yourself the edge? Pitch your idea via video." value="{{ slides }}">
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="form-talk-type" class="col-sm-2 control-label">Talk Type</label>
         <div class="col-sm-10">
@@ -50,13 +61,6 @@
                     <option value="{{ levelKey }}" {% if level == levelKey %}selected {% endif %}>{{ displayLevel }}</option>
                 {% endfor %}
             </select>
-        </div>
-    </div>
-    <div class="form-group">
-        <label for="form-talk-other" class="col-sm-2 control-label">Additional Talk Information</label>
-        <div class="col-sm-10">
-            <textarea id="form-talk-other" name="other" class="form-control" placeholder="Other Considerations, such as Joind.In, Lanyrd, local user group, etc." rows="10">{{ other }}</textarea>
-            <p class="help-block">Talk additional information can be written using <a href="http://daringfireball.net/projects/markdown/basics" target="_blank">markdown</a> to support links</p>
         </div>
     </div>
     <div class="form-group">

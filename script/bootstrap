@@ -11,10 +11,10 @@ if [ "$CFP_ENV" = "" ]; then
 fi
 
 echo "==> Installing dependencies..."
-if command -v composer &>/dev/null; then
-    composer install
+if command -v ls &>/dev/null; then
+    /usr/local/php55/bin/php-cli ~/composer.phar install
 elif [ -f "composer.phar" ]; then
-    php composer.phar install
+    /usr/local/php55/bin/php-cli ~/composer.phar install
 else
     echo "ERROR: Composer path unknown. Please install composer or download composer.phar"
     exit 1

@@ -1,0 +1,7 @@
+[23-Nov-2016 11:01:33 CST6CDT] PHP Fatal error:  require_once(): Failed opening required '/home/widgila9/public_html/opencfp-root/webindex_dev.php' (include_path='.:/usr/local/php56/pear') in /home/widgila9/public_html/opencfp-root/web/server.php on line 10
+[30-Nov-2016 23:33:10 UTC] PHP Fatal error:  Uncaught exception 'Swift_TransportException' with message 'Connection could not be established with host  [php_network_getaddresses: getaddrinfo failed: Name or service not known #0]' in /home/widgila9/public_html/opencfp-root/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php:259
+Stack trace:
+#0 /home/widgila9/public_html/opencfp-root/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php(64): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 /home/widgila9/public_html/opencfp-root/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/AbstractSmtpTransport.php(115): Swift_Transport_StreamBuffer->initialize(Array)
+#2 /home/widgila9/public_html/opencfp-root/vendor/swiftmailer/swiftmailer/lib/classes/Swift/MemorySpool.php(74): Swift_Transport_AbstractSmtpTransport->start()
+#3 /home/widgila9/public_html/opencfp-root/vendor/silex/silex/src/Silex/Provider/SwiftmailerServiceProvider.php(95): Swift_MemorySpool->flushQueue(Object(Swift_Transport_EsmtpTra in /home/widgila9/public_html/opencfp-root/vendor/swiftmailer/swiftmailer/lib/classes/Swift/Transport/StreamBuffer.php on line 259

@@ -3,10 +3,11 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.6rem;
   padding: 5.5rem 0;
+  color: #575357;
 }
 
 a {
-  color: #e24b3b;
+  color: #e6aa50;
 }
 
 a:hover {
@@ -18,7 +19,7 @@ a:hover {
 }
 
 .header {
-  background: #e24b3b;
+  background: #2d282d;
   color: #FFF;
   padding: 6rem 0;
 }
@@ -47,13 +48,13 @@ a:hover {
 }
 
 .section--primary {
-  background: #e24b3b;
+  background: #e6aa50;
   color: #FFF;
 }
 
 .section--light {
-  background: #EEE;
-  color: #7e8690;
+  background: #e6aa50;
+  color: #575357;
 }
 
 .headline {
@@ -64,6 +65,7 @@ a:hover {
 
 .headline--alpha {
   font-weight: 700;
+  font-size:23px;
 }
 
 .headline--beta {
@@ -140,21 +142,21 @@ a:hover {
  */
 .btn-opencfp--primary {
   background: #FFF;
-  color: #e24b3b;
+  color: #e6aa50;
 }
 
 .btn-opencfp--primary:hover {
   background: #F7F7F7;
-  color: #e24b3b;
+  color: #e6aa50;
 }
 
 .btn-opencfp--light {
-  background: #7e8690;
+  background: #575357;
   color: #FFF;
 }
 
 .btn-opencfp--light:hover {
-  background: #5c636c;
+  background: #2d282d;
   color: #FFF;
 }
 
@@ -166,7 +168,7 @@ a:hover {
 
 .btn-opencfp--outlined:hover {
   background: #FFF;
-  color: #e24b3b;
+  color: #e6aa50;
 }
 
 .btn-opencfp--centered {
@@ -184,7 +186,7 @@ a:hover {
 }
 
 .module__header {
-  background: #e24b3b;
+  background: #e6aa50;
   color: #FFF;
   padding: 1rem 2rem;
 }
@@ -301,7 +303,7 @@ a:hover {
 .primary-text,
 .megaphone-cover,
 .megaphone-end {
-  fill: #e24b3b;
+  fill: #e6aa50;
 }
 
 .base-text,
@@ -384,7 +386,7 @@ a:hover {
 }
 
 .navbar-opencfp {
-  background: #374146;
+  background: #2d282d;
 }
 
 .navbar-collapse {
@@ -409,7 +411,7 @@ a:hover {
 .navbar-opencfp .nav .open>a:focus
 {
   background: none;
-  border-color: #e24b3b;
+  border-color: #e6aa50;
 }
 
 .navbar-opencfp .navbar-toggle {
