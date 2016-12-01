@@ -18,7 +18,7 @@
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#abstract" aria-controls="abstract" role="tab" data-toggle="tab">Abstract</a></li>
                 <li role="presentation"><a href="#additional-info" aria-controls="profile" role="tab" data-toggle="tab">Additional Information</a></li>
-                <li role="presentation"><a href="#other-talks" aria-controls="messages" role="tab" data-toggle="tab">Other Talks</a></li>
+                <li role="presentation"><a href="#other-talks" aria-controls="messages" role="tab" data-toggle="tab">Other Events</a></li>
             </ul>
 
             <div class="tab-content">
@@ -33,15 +33,19 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" id="additional-info">
                     <p>
+                        <strong>Videos:</strong> {% if talk.videos is defined %}{{ talk.videos }}{% endif %}<br />
                         <strong>Slides:</strong> {% if talk.slides is defined %}{{ talk.slides }}{% endif %}<br />
                         <strong>Type:</strong> {{ talkHelper.getTypeDisplayName(talk.type) }}<br />
                         <strong>Level:</strong> {% if talk.level is defined %}{{ talkHelper.getLevelDisplayName(talk.level) }}{% endif %}<br />
                         <strong>Category:</strong> {% if talk.category is defined %}{{ talkHelper.getCategoryDisplayName(talk.category) }}{% endif %}<br />
-                        <strong>Desired:</strong> {% if talk.desired is defined %}{{ talk.desired ? 'Yes' : 'No' }}{% endif %}<br />
-                        <strong>Sponsor:</strong> {% if talk.sponsor is defined %}{{ talk.sponsor ? 'Yes' : 'No' }}{% endif %}<br />
+                        <strong>Best Submission:</strong> {% if talk.desired is defined %}{{ talk.desired ? 'Yes' : 'No' }}{% endif %}<br />
+                        <strong>Given Talk Before:</strong> {% if talk.sponsor is defined %}{{ talk.sponsor ? 'Yes' : 'No' }}{% endif %}<br />
+                        <strong>Given Talk Before at:</strong> {% if talk.oplace is defined %}{{ talk.oplace}}{% endif %}<br />
                     </p>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="other-talks">
+                    <strong>Other Events:</strong> {% if talk.oevents is defined %}{{ talk.oevents}}{% endif %}<br />
+
                     {% if otherTalks | length > 0 %}
                         {% for talk in otherTalks %}
                             <a href="{{ url('admin_talk_view', { id: talk.id }) }}">{{ talk.title }}</a><br>
