@@ -389,6 +389,10 @@ a:hover {
   background: #2d282d;
 }
 
+.navbar-opencfp .logo{
+    padding-top: 5px;
+}
+
 .navbar-collapse {
   max-height: none;
 }
