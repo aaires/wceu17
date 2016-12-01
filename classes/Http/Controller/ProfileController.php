@@ -274,6 +274,9 @@ class ProfileController extends BaseController
         $user->info = $sanitized_data['speaker_info'];
         $user->bio = $sanitized_data['speaker_bio'];
 
+        error_log('DEBUG');
+        error_log(print_r($user, true));
+
         return $mapper->save($user);
     }
 }
