@@ -26,7 +26,11 @@ class Talk extends Entity
             'selected' => ['type' => 'smallint', 'value' => 0],
             'created_at' => ['type' => 'datetime', 'value' => new \DateTime()],
             'updated_at' => ['type' => 'datetime', 'value' => new \DateTime()],
-			'videos' => ['type' => 'string', 'lenght' => 50 ],
+			'videos' => ['type' => 'text', 'lenght' => 255 ],
+            'pitch' => ['type' => 'string', 'lenght' => 255 ],
+            'oplace' => ['type' => 'string', 'lenght' => 255 ],
+            'oevents' => ['type' => 'text', 'lenght' => 255 ],
+
 		];
     }
 
@@ -54,7 +58,10 @@ class Talk extends Entity
             'slides' => $this->slides,
             'other' => $this->other,
             'sponsor' => $this->sponsor,
-            'videos' => $this->videos
+            'videos' => $this->videos,
+            'pitch' => $this->pitch,
+            'oplace' => $this->oplace,
+            'oevents' => $this->oevents
         ];
     }
 }
