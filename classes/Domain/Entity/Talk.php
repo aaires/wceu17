@@ -54,6 +54,7 @@ class Talk extends Entity
             'slides' => $this->slides,
             'other' => $this->other,
             'sponsor' => $this->sponsor,
+            'videos' => $this->videos
         ];
     }
 }

@@ -16,6 +16,7 @@ class TalkForm extends Form
         'category',
         'desired',
         'slides',
+        'videos',
         'other',
         'sponsor',
         'user_id',
