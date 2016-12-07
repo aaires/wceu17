@@ -42,8 +42,9 @@ class ProfileController extends BaseController
         $form_data = [
             'email' => $user->getLogin(),
             'first_name' => $speaker_data['first_name'],
-            'last_name' => $speaker_data['last_name'],
             'company' => $speaker_data['company'],
+            'last_name' => $speaker_data['last_name'],
+            'nationality' => $speaker_data['nationality'],
             'twitter' => $speaker_data['twitter'],
             'wporg'   => $speaker_data['wporg'],
             'slack' => $speaker_data['slack'],
@@ -92,6 +93,7 @@ class ProfileController extends BaseController
             'user_id' => $req->get('id'),
             'first_name' => $req->get('first_name'),
             'last_name' => $req->get('last_name'),
+            'nationality' => $req->get('nationality'),
             'company' => $req->get('company'),
             'twitter' => $req->get('twitter'),
             'wporg' => $req->get('wporg'),
@@ -144,6 +146,7 @@ class ProfileController extends BaseController
             $user->email = $sanitized_data['email'];
             $user->first_name = $sanitized_data['first_name'];
             $user->last_name = $sanitized_data['last_name'];
+            $user->nationality = $sanitized_data['nationality'];
             $user->company = $sanitized_data['company'];
             $user->twitter = $sanitized_data['twitter'];
             $user->wporg = $sanitized_data['wporg'];
@@ -278,6 +281,7 @@ class ProfileController extends BaseController
         $user->email = $sanitized_data['email'];
         $user->first_name = $sanitized_data['first_name'];
         $user->last_name = $sanitized_data['last_name'];
+        $user->nationality = $sanitized_data['nationality'];
         $user->company = $sanitized_data['company'];
         $user->twitter = $sanitized_data['twitter'];
         $user->wporg = $sanitized_data['wporg'];

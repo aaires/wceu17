@@ -49,6 +49,7 @@ class SignupController extends BaseController
             'formAction' => $this->url('user_create'),
             'first_name' => $req->get('first_name'),
             'last_name' => $req->get('last_name'),
+            'nationality' => $req->get('nationality'),
             'company' => $req->get('company'),
             'twitter' => $req->get('twitter'),
             'wporg' => $req->get('wporg'),
@@ -99,6 +100,7 @@ class SignupController extends BaseController
                 $user_data = [
                     'first_name' => $sanitized_data['first_name'],
                     'last_name' => $sanitized_data['last_name'],
+                    'nationality' => $sanitized_data['nationality'],
                     'company' => $sanitized_data['company'],
                     'twitter' => $sanitized_data['twitter'],
                     'wporg' => $sanitized_data['wporg'],

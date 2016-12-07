@@ -24,6 +24,7 @@ class User extends Entity
             'reset_password_code' => ['type' => 'string', 'length' => 255],
             'first_name' => ['type' => 'string', 'length' => 255],
             'last_name' => ['type' => 'string', 'length' => 255],
+            'nationality' => ['type' => 'string', 'length' => 200],
             'created_at' => ['type' => 'datetime', 'value' => new \DateTime()],
             'updated_at' => ['type' => 'datetime', 'value' => new \DateTime()],
             'company' => ['type' => 'string', 'length' => 255],

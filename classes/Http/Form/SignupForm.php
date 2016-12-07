@@ -13,6 +13,7 @@ class SignupForm extends Form
         'password2',
         'first_name',
         'last_name',
+        'nationality',
         'company',
         'twitter',
         'wporg',
@@ -46,6 +47,7 @@ class SignupForm extends Form
         $valid_email = $this->validateEmail();
         $valid_first_name = $this->validateFirstName();
         $valid_last_name = $this->validateLastName();
+        $valid_nationality = $this->validateNationality();
         $valid_company = $this->validateCompany();
         $valid_twitter = $this->validateTwitter();
         $valid_wporg = $this->validateWporg();
@@ -68,6 +70,7 @@ class SignupForm extends Form
             $valid_passwords &&
             $valid_first_name &&
             $valid_last_name &&
+            $valid_nationality &&
             $valid_company &&
             $valid_twitter &&
             $valid_wporg &&
@@ -262,6 +265,10 @@ class SignupForm extends Form
     public function validateSlack()
     {
         // $twitter = $this->_cleanData['slack'];
+        return true;
+    }
+
+    public function validateNationality(){
         return true;
     }
 

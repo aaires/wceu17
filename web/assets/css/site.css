@@ -43,7 +43,7 @@ a:hover {
 }
 
 .admin-content {
-  padding: 1rem 4rem;
+  padding: 3rem 4rem;
 }
 
 .section--full {
@@ -451,6 +451,8 @@ a:hover {
 .nav-sidebar > li li > a {
   color: #bbb;
 }
+
+ul.nav-sidebar{ margin-top: 25px;}
 
 .nav-icon {
   display: inline-block;
