@@ -17,13 +17,13 @@
             </p>
 
 
-            {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
+            {% if talk_meta.admin_user_id == -1 or talk_meta.admin_user_id == -3 or talk_meta.admin_user_id == -4 or talk_meta.admin_user_id == -5 %}
             <h5><strong>Submitted by:</strong> <a href="{{ url('admin_speaker_view', { id: talk.user_id }) }}">{{ speaker.first_name }} {{ speaker.last_name }}</a></h5>
             {% endif %}
 
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#abstract" aria-controls="abstract" role="tab" data-toggle="tab">Abstract</a></li>
-                {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
+                {% if talk_meta.admin_user_id == -1 or talk_meta.admin_user_id == -3 or talk_meta.admin_user_id == -4 or talk_meta.admin_user_id == -5 %}
                 <li role="presentation"><a href="#additional-info" aria-controls="profile" role="tab" data-toggle="tab">Additional Information</a></li>
                 <li role="presentation"><a href="#other-talks" aria-controls="messages" role="tab" data-toggle="tab">Other Events</a></li>
                 {% endif %}
@@ -35,13 +35,13 @@
                     {% if talk.other is defined %}
                         <p><strong>Key takeaway:</strong> {{ talk.other|striptags|markdown }}</p>
                     {% endif %}
-                    {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
+                    {% if talk_meta.admin_user_id == -1 or talk_meta.admin_user_id == -3 or talk_meta.admin_user_id == -4 or talk_meta.admin_user_id == -5 %}
                     {% if talk.pitch is defined %}
                         <p><strong>Video Pitch:</strong> {{ talk.pitch }}</p>
                     {% endif %}
                     {% endif %}
                 </div>
-                {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
+                {% if talk_meta.admin_user_id == -1 or talk_meta.admin_user_id == -3 or talk_meta.admin_user_id == -4 or talk_meta.admin_user_id == -5 %}
 
                 <div role="tabpanel" class="tab-pane" id="additional-info">
                     <p>
