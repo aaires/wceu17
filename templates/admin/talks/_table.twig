@@ -19,7 +19,8 @@
                 {% if false == talk.user %}
                 <td><em>Unknown User</em></td>
                 {% else %}
-                <td><a href="{{ url('admin_speaker_view', { id: talk.user.id }) }}">{{ talk.user.first_name }} {{ talk.user.last_name }}</a></td>
+                <!--<td><a href="{{ url('admin_speaker_view', { id: talk.user.id }) }}">{{ talk.user.first_name }} {{ talk.user.last_name }}</a></td>-->
+                    <td><a href="{{ url('admin_speaker_view', { id: talk.user.id }) }}">{{ profile.name }} {{ profile.name }}</a></td>
                 {% endif %}
                 <td>
                     <a href="#" id="talk-upvote-{{ talk.id }}" class="js-talk-rating" data-id="{{ talk.id }}" data-rating="1" title="I want to see this talk"><i class="fa fa-thumbs-up admin-icon{% if talk.meta.rating == 1 %} admin-icon--selected{% endif %}"></i></a>
