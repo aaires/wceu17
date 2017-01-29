@@ -35,8 +35,10 @@
                     {% if talk.other is defined %}
                         <p><strong>Key takeaway:</strong> {{ talk.other|striptags|markdown }}</p>
                     {% endif %}
+                    {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
                     {% if talk.pitch is defined %}
                         <p><strong>Video Pitch:</strong> {{ talk.pitch }}</p>
+                    {% endif %}
                     {% endif %}
                 </div>
                 {% if talk_meta.admin_user_id == 11 or talk_meta.admin_user_id == 3 or talk_meta.admin_user_id == 4 or talk_meta.admin_user_id == 5 %}
