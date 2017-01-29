@@ -31,12 +31,18 @@ class DashboardController extends BaseController
 
         $recent_talks = $talk_mapper->getRecent($sentry->getUser()->getId());
 
+        $sentry = $this->service('sentry');
+
+        $admin_user_id = $sentry->getUser()->getId();
+
+
         $templateData = [
             'speakerTotal' => $speaker_total,
             'talkTotal' => $talk_mapper->all()->count(),
             'favoriteTotal' => $favorite_mapper->all()->count(),
             'selectTotal' => $talk_mapper->all()->where(['selected' => 1])->count(),
             'talks' => $recent_talks,
+            'admin_user_id' => $admin_user_id
         ];
 
         return $this->render('admin/index.twig', $templateData);
