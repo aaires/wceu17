@@ -13,6 +13,7 @@
             <p>
                 {% if talk.level is defined %}<span class="label label-primary">{{ talkHelper.getLevelDisplayName(talk.level) }}</span>{% endif %}
                 {% if talk.category is defined %}<span class="label label-warning">{{ talkHelper.getCategoryDisplayName(talk.category) }}</span>{% endif %}
+                <span class="label label-info">{{ talkHelper.getTypeDisplayName(talk.type) }}</span>
             </p>
             <h5><strong>Submitted by:</strong> <a href="{{ url('admin_speaker_view', { id: talk.user_id }) }}">{{ speaker.first_name }} {{ speaker.last_name }}</a></h5>
             <ul class="nav nav-tabs" role="tablist">
