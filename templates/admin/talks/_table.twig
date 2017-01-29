@@ -6,7 +6,7 @@
             <th width="8%" class="sort" data-field="category">Category</th>
             <th width="20%" class="sort" data-field="created_at">Created On</th>
 
-            {% if admin_user_id == 1 || admin_user_id == 3 || admin_user_id == 4 || admin_user_id == 5   %}
+            {% if admin_user_id == 1 or admin_user_id == 3 or admin_user_id == 4 or admin_user_id == 5   %}
             <th width="12%" class="sort" data-field="first_name">Submitted by</th>
             {% endif %}
             <th width="8%">&nbsp;</th>
@@ -19,8 +19,7 @@
                 <td>{{ talkHelper.getTypeDisplayName(talk.type) }}</td>
                 <td>{{ talkHelper.getCategoryDisplayName(talk.category) }}</td>
                 <td>{{ talk.created_at|date("M jS Y \\a\\t g:ia T") }}</td>
-
-                {% if admin_user_id == 1 || admin_user_id == 3 || admin_user_id == 4 || admin_user_id == 5   %}
+                {% if admin_user_id == 1 or admin_user_id == 3 or admin_user_id == 4 or admin_user_id == 5   %}
                 {% if false == talk.user %}
                 <td><em>Unknown User</em></td>
                 {% else %}
