@@ -5,7 +5,10 @@
             <th width="7%" class="sort" data-field="type">Type</th>
             <th width="8%" class="sort" data-field="category">Category</th>
             <th width="20%" class="sort" data-field="created_at">Created On</th>
+
+            {% if admin_user_id == 1 || admin_user_id == 3 || admin_user_id == 4 || admin_user_id == 5   %}
             <th width="12%" class="sort" data-field="first_name">Submitted by</th>
+            {% endif %}
             <th width="8%">&nbsp;</th>
         </tr>
     </thead>
@@ -16,10 +19,10 @@
                 <td>{{ talkHelper.getTypeDisplayName(talk.type) }}</td>
                 <td>{{ talkHelper.getCategoryDisplayName(talk.category) }}</td>
                 <td>{{ talk.created_at|date("M jS Y \\a\\t g:ia T") }}</td>
-                {% if false == talk.user %}
+                {% if false == talk.user || admin_user_id == 1 || admin_user_id == 3 || admin_user_id == 4 || admin_user_id == 5 %}
                 <td><em>Unknown User</em></td>
                 {% else %}
-                <td><a href="{{ url('admin_speaker_view', { id: admin_user_id }) }}">{{ talk.user.first_name }} {{ talk.user.last_name }}</a></td>
+                <td><a href="{{ url('admin_speaker_view', { id: talk.user.id }) }}">{{ talk.user.first_name }} {{ talk.user.last_name }}</a></td>
                 {% endif %}
                 <td>
                     <a href="#" id="talk-upvote-{{ talk.id }}" class="js-talk-rating" data-id="{{ talk.id }}" data-rating="1" title="I want to see this talk"><i class="fa fa-thumbs-up admin-icon{% if talk.meta.rating == 1 %} admin-icon--selected{% endif %}"></i></a>
