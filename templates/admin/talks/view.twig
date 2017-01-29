@@ -11,8 +11,8 @@
         <div class="module__body">
             <h2 class="headline">{{ talk.title }}</h2>
             <p>
-                {% if talk.level is defined %}<span class="label label-primary">{{ talkHelper.getLevelDisplayName(talk.level) }}</span>{% endif %}
                 {% if talk.category is defined %}<span class="label label-warning">{{ talkHelper.getCategoryDisplayName(talk.category) }}</span>{% endif %}
+                {% if talk.level is defined %}<span class="label label-primary">{{ talkHelper.getLevelDisplayName(talk.level) }}</span>{% endif %}
                 <span class="label label-info">{{ talkHelper.getTypeDisplayName(talk.type) }}</span>
             </p>
 
