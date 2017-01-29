@@ -45,10 +45,15 @@ class AdminsController extends BaseController
             ['proximity' => 3]
         );
 
+
+        $sentry = $this->service('sentry');
+        $admin_user_id = (int) $sentry->getUser()->getId();
+
         $templateData = [
             'pagination' => $pagination,
             'speakers' => $pagerfanta,
             'page' => $pagerfanta->getCurrentPage(),
+            'admin_user_id' => $admin_user_id
         ];
 
         return $this->render('admin/admins/index.twig', $templateData);
