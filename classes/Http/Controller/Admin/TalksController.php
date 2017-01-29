@@ -70,6 +70,7 @@ class TalksController extends BaseController
             'per_page' => $per_page,
             'sort' => $req->get('sort'),
             'order_by' => $req->get('order_by'),
+            'admin_user_id' => $admin_user_id
         ];
 
         return $this->render('admin/talks/index.twig', $templateData);
