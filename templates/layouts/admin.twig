@@ -33,6 +33,7 @@
                             <a href="#" class="{% if path('admin') == current_page %}active{% endif %} dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="{{ url('admin') }}">Admin</a></li>
+                                <li><a href="{{ url('admin_talks') }}">Talks</a></li>
                                 {% if admin_user_id == -1 or admin_user_id == -3 or admin_user_id == -4 or admin_user_id == -5 %}
                                 <li><a href="{{ url('admin_speakers') }}">Speakers</a></li>
                                 <li><a href="{{ url('admin_admins') }}">Admins</a></li>
@@ -49,6 +50,7 @@
         <aside class="sidebar col-sm-3 col-md-2 hidden-xs">
             <ul class="nav nav-sidebar">
                 <li><a href="{{ url('admin') }}"><img data-src="/assets/img/icons/home.svg" alt="Home Dashboard" class="svg-inject nav-icon icon-12"> Admin Dashboard</a></li>
+                <li><a href="{{ url('admin_talks') }}"><img data-src="/assets/img/icons/microphone.svg" alt="Talks" class="svg-inject nav-icon icon-12"> Talks</a></li>
 
                 {% if admin_user_id == -1 or admin_user_id == -3 or admin_user_id == -4 or admin_user_id == -5 %}
                 <li><a href="{{ url('admin_speakers') }}"><img data-src="/assets/img/icons/people.svg" alt="Speakers" class="svg-inject nav-icon icon-12"> Speakers</a></li>
