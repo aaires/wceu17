@@ -409,6 +409,11 @@ class Talk extends Mapper
             'level' => $talk->level,
             'desired' => $talk->desired,
             'sponsor' => $talk->sponsor,
+            'videos'  => $talk->videos,
+            'pitch'   => $talk->pitch,
+            'oplace'  => $talk->oplace,
+            'oevents' => $talk->oevents
+
         ];
 
         if ($talk->speaker && $userData) {
