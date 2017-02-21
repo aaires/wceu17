@@ -412,7 +412,10 @@ class Talk extends Mapper
             'videos'  => $talk->videos,
             'pitch'   => $talk->pitch,
             'oplace'  => $talk->oplace,
-            'oevents' => $talk->oevents
+            'oevents' => $talk->oevents,
+            'total_rating' => $talk->total_rating,
+            'review_count' => $talk->review_count
+
 
         ];
 
